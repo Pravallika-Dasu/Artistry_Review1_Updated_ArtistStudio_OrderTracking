@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --ink: #20201e;
+    --muted: #77736d;
+    --paper: #f7f5f0;
+    --white: #fffefa;
+    --gold: #b18a4b;
+    --line: #e7e1d7;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; }
+* { box-sizing: border-box; }
+button, input, select, textarea { font: inherit; }
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.global-header {
+    min-height: 88px; width: 100%; padding: 0 clamp(20px, 5vw, 76px); display: flex;
+    align-items: center; justify-content: space-between; gap: 28px; background: rgba(255,254,250,.97);
+    border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10000;
+    box-shadow: 0 5px 24px rgba(35,29,20,.045); backdrop-filter: blur(14px);
+}
+.brand-mark { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; flex-shrink: 0; }
+.brand-symbol { width: 43px; height: 43px; display: grid; place-items: center; border: 1px solid var(--gold); color: var(--gold); font: 700 25px 'Playfair Display',serif; }
+.brand-copy { display: flex; flex-direction: column; gap: 3px; }
+.brand-copy strong { font: 700 17px 'Playfair Display',serif; letter-spacing: 2.5px; }
+.brand-copy small { color: var(--muted); font-size: 8px; letter-spacing: 1.55px; }
+.global-nav { display: flex; align-items: center; justify-content: center; gap: clamp(13px, 2vw, 30px); }
+.global-nav a { color: #55514b; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: .25px; padding: 34px 0 31px; border-bottom: 2px solid transparent; transition: color .2s,border-color .2s; }
+.global-nav a:hover,.global-nav a.active { color: var(--gold); border-bottom-color: var(--gold); }
+.header-actions { display: flex; align-items: center; gap: 13px; flex-shrink: 0; }
+.header-icon-link { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); text-decoration: none; font-size: 19px; transition: all .2s; }
+.header-icon-link:hover { background: var(--ink); color: white; border-color: var(--ink); }
+.header-user { color: var(--muted); font-size: 11px; white-space: nowrap; }
+.header-logout { border: 1px solid var(--ink); background: var(--ink); color: white; padding: 10px 15px; font-size: 10px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; cursor: pointer; }
+.header-logout:hover { background: var(--gold); border-color: var(--gold); }
+.mobile-menu-toggle { display: none; }
+.global-main { width: 100%; flex: 1; min-width: 0; }
+.global-footer { background: #22221f; color: #f7f3eb; padding: 54px clamp(22px, 7vw, 100px) 18px; margin-top: 55px; }
+.footer-main { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.7fr .8fr .8fr 1.2fr; gap: 55px; padding-bottom: 42px; }
+.footer-brand { font: 700 19px 'Playfair Display',serif; letter-spacing: 2px; }
+.footer-brand span { color: #c7a66e; font-size: 27px; margin-right: 7px; }
+.footer-brand-block p,.footer-note p { max-width: 310px; color: #bcb8ae; font-size: 12px; line-height: 1.9; }
+.footer-column { display: flex; flex-direction: column; gap: 12px; }
+.footer-column h4 { color: #c7a66e; font-size: 10px; letter-spacing: 1.8px; margin: 4px 0 8px; }
+.footer-column a { color: #d6d1c8; text-decoration: none; font-size: 12px; }
+.footer-column a:hover { color: #d8b77d; }
+.footer-eyebrow { color: #c7a66e; font-size: 9px; letter-spacing: 2px; }
+.footer-bottom-line { max-width: 1280px; margin: auto; padding-top: 17px; border-top: 1px solid #484640; display: flex; justify-content: space-between; gap: 15px; color: #aaa69e; font-size: 10px; }
+
+/* Hide the page-specific headers and footers so every application route uses one shared shell. */
+.global-main .header,.global-main .admin-header,.global-main .ap-header,.global-main .artists-header,
+.global-main .auction-header,.global-main .buy-header,.global-main .exhibitions-header,
+.global-main .my-bids-header,.global-main .orders-header,.global-main .registrations-header,
+.global-main .footer,.global-main .admin-footer,.global-main .ap-footer,.global-main .artists-footer,
+.global-main .auction-footer,.global-main .exhibitions-footer,.global-main .my-bids-footer,
+.global-main .orders-footer,.global-main .registrations-footer { display: none !important; }
+.global-main .gallery-home { padding-top: 0; }
+
+@media (max-width: 1120px) {
+    .global-header { gap: 15px; padding-inline: 22px; }
+    .global-nav { gap: 14px; }
+    .global-nav a { font-size: 11px; }
+    .header-user { display: none; }
+}
+@media (max-width: 850px) {
+    .global-header { min-height: 76px; flex-wrap: wrap; }
+    .mobile-menu-toggle { display: flex; width: 38px; height: 38px; border: 1px solid var(--line); background: transparent; flex-direction: column; justify-content: center; align-items: center; gap: 5px; margin-left: auto; }
+    .mobile-menu-toggle span { width: 17px; height: 1.5px; background: var(--ink); }
+    .global-nav { display: none; order: 4; width: 100%; padding: 0 0 15px; flex-wrap: wrap; justify-content: flex-start; }
+    .global-nav.is-open { display: flex; }
+    .global-nav a { padding: 9px 0; border-bottom-width: 1px; }
+    .header-actions { gap: 7px; }
+    .header-logout { padding: 9px 10px; }
+    .footer-main { grid-template-columns: 1.3fr 1fr 1fr; gap: 28px; }
+    .footer-note { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+    .global-header { padding: 12px 15px; gap: 10px; }
+    .brand-symbol { width: 37px; height: 37px; }
+    .brand-copy strong { font-size: 14px; }
+    .brand-copy small { font-size: 7px; }
+    .header-actions { width: 100%; order: 3; justify-content: flex-end; padding-bottom: 3px; }
+    .mobile-menu-toggle { margin-left: auto; }
+    .global-nav { order: 4; }
+    .footer-main { grid-template-columns: 1fr 1fr; }
+    .footer-brand-block,.footer-note { grid-column: 1 / -1; }
+    .global-footer { padding-top: 38px; }
+    .footer-bottom-line { flex-direction: column; }
+}
+
+/* Review 1: full-width storefront layout */
+.global-main>.gallery-home,.global-main>.gallery-list-page,.global-main>.wishlist-page,
+.global-main>.artists-page,.global-main>.auction-page,.global-main>.exhibitions-page,
+.global-main>.orders-page,.global-main>.my-bids-page,.global-main>.registrations-page,
+.global-main>.admin-page,.global-main>.artist-profile-page,.global-main>.buy-page{width:100%;max-width:none;margin:0}
+.global-main .gallery-home>.menu{display:none!important}
+.global-main .gallery-home>.header{display:none!important}
+.global-main .gallery-list-page>.header,.global-main .wishlist-page>.header{display:none!important}
+.global-main .gallery-list-page,.global-main .wishlist-page{padding-top:0}
+.global-footer{width:100%;margin-top:0}
+.footer-main,.footer-bottom-line{width:100%;max-width:1500px}
+@media(min-width:1500px){.global-header{padding-inline:max(5vw,calc((100vw - 1500px)/2))}}
+
+/* Give listing and dashboard content a generous desktop canvas. */
+.global-main .auction-main,.global-main .exhibitions-main,.global-main .my-bids-main,
+.global-main .orders-main,.global-main .registrations-main,.global-main .admin-container,
+.global-main .artist-container,.global-main .gallery-list-page .artworks,
+.global-main .wishlist-page .artworks{width:min(calc(100% - 56px),1600px);max-width:1600px;margin-left:auto;margin-right:auto}
+@media(max-width:640px){.global-main .auction-main,.global-main .exhibitions-main,.global-main .my-bids-main,
+.global-main .orders-main,.global-main .registrations-main,.global-main .admin-container,
+.global-main .artist-container,.global-main .gallery-list-page .artworks,
+.global-main .wishlist-page .artworks{width:calc(100% - 28px)}}

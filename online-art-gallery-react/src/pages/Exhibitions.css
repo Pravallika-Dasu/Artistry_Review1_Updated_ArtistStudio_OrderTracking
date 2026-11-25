@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+.exhibitions-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+.exhibitions-header {
+    background-color: #9fc1cc;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+.exhibitions-header-content {
+    text-align: center;
+}
+
+.exhibitions-header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.exhibitions-header p {
+    margin: 8px 0 0 0;
+    font-size: 15px;
+}
+
+/* TOP LINKS */
+
+.exhibitions-top-links {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.exhibitions-top-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.exhibitions-top-links a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN */
+
+.exhibitions-main {
+    width: 1000px;
+    max-width: 92%;
+    margin: 35px auto;
+}
+
+/* INTRO */
+
+.exhibitions-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.exhibitions-intro h2 {
+    margin-bottom: 8px;
+}
+
+.exhibitions-intro p {
+    color: #555;
+}
+
+/* GRID */
+
+.exhibitions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* CARDS */
+
+.exhibition-card {
+    background-color: white;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.exhibition-card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.exhibition-card p {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.exhibition-date {
+    font-weight: bold;
+    color: #444;
+}
+
+.exhibition-status {
+    display: inline-block;
+    background-color: #e7f5e9;
+    color: #26733a;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* REGISTER BUTTON */
+
+.exhibition-register-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.exhibition-register-button:hover {
+    background-color: #43a047;
+}
+
+/* MODAL */
+
+.exhibition-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.exhibition-modal-box {
+    background-color: white;
+    width: 450px;
+    max-width: 90%;
+    margin: 100px auto;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.exhibition-modal-box h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.exhibition-modal-box label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.exhibition-modal-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.exhibition-modal-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.exhibition-submit-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.exhibition-cancel-button {
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* FOOTER */
+
+.exhibitions-footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+.exhibitions-footer p {
+    margin: 5px;
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+
+    .exhibitions-header {
+        min-height: 150px;
+    }
+
+    .exhibitions-top-links {
+        top: auto;
+        bottom: 18px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .exhibitions-grid {
+        grid-template-columns: 1fr;
+    }
+}

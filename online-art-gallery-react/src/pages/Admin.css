@@ -1,0 +1,110 @@
+.admin-page {
+margin: 0;
+min-height: 100vh;
+font-family: Arial, sans-serif;
+background-color: beige;
+}
+
+.admin-header {
+background-color: lightblue;
+text-align: center;
+padding: 20px;
+}
+
+.admin-header h1 {
+margin: 0;
+}
+
+.admin-header p {
+font-size: 18px;
+}
+
+.admin-container {
+display: flex;
+gap: 25px;
+padding: 30px;
+align-items: flex-start;
+}
+
+.admin-section {
+width: 50%;
+background-color: white;
+border: 2px solid black;
+padding: 20px;
+box-sizing: border-box;
+}
+
+.admin-section h2 {
+text-align: center;
+padding: 15px;
+margin-top: 0;
+}
+
+.orders-section h2 {
+background-color: lightyellow;
+}
+
+.artists-section h2 {
+background-color: lightgreen;
+}
+
+.admin-order {
+background-color: #fffdf0;
+border: 1px solid black;
+padding: 20px;
+margin-bottom: 20px;
+}
+
+.admin-artist {
+background-color: #f0fff0;
+border: 1px solid black;
+padding: 20px;
+margin-bottom: 20px;
+}
+
+.admin-order h3,
+.admin-artist h3 {
+margin-top: 0;
+}
+
+.admin-order button,
+.admin-artist button {
+padding: 10px 20px;
+margin: 5px;
+cursor: pointer;
+}
+
+.approve {
+color: green;
+font-weight: bold;
+}
+
+.reject {
+color: red;
+font-weight: bold;
+}
+
+.pending {
+color: orange;
+font-weight: bold;
+}
+
+.admin-footer {
+background-color: black;
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: 30px;
+}
+
+@media (max-width: 800px) {
+.admin-container {
+flex-direction: column;
+}
+
+.admin-section {
+width: 100%;
+}
+}
+
+.admin-artist-photo{width:100px;height:100px;object-fit:cover;border-radius:50%;border:2px solid #b99a68;margin-bottom:12px}.admin-upload-review{background:#fffdf7;border:1px solid #d8cbb6;padding:14px;margin:14px 0}.admin-upload-review h4{margin:8px 0;color:#5a4932}.admin-upload-review a{color:#76572d;font-weight:600}.admin-sample-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.admin-sample-grid a{display:flex;flex-direction:column;gap:5px;overflow-wrap:anywhere}.admin-sample-grid img{width:100%;height:120px;object-fit:cover;border-radius:5px}.admin-order-actions{display:flex;flex-wrap:wrap;gap:6px}.admin-order-actions button{background:#332d25;color:white;border:0;border-radius:4px}.admin-order-actions button:hover{background:#967448}

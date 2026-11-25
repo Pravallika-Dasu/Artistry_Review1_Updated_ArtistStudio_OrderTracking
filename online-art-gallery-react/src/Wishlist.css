@@ -1,0 +1,254 @@
+html,
+body{
+    margin:0;
+    padding:0;
+    min-height:100%;
+}
+
+body{
+    font-family:Arial;
+    background-color:beige;
+}
+
+
+/* HEADER */
+
+.header{
+    background-color:lightblue;
+    height:120px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.header-title{
+    text-align:center;
+}
+
+.header-title h1{
+    margin:0;
+    font-size:30px;
+}
+
+.header-title p{
+    margin:8px 0 0 0;
+    font-size:15px;
+}
+
+
+/* TOP RIGHT LINKS */
+
+.top-links{
+    position:absolute;
+    right:30px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.top-links a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+.top-links a:hover{
+    text-decoration:underline;
+}
+
+
+/* MAIN */
+
+.main{
+    width:1000px;
+    max-width:90%;
+    margin:35px auto;
+}
+
+
+/* TITLE */
+
+.page-title{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.page-title h2{
+    margin:0;
+}
+
+
+/* ARTWORK GRID */
+
+.artworks{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+
+/* ARTWORK CARD */
+
+.artwork{
+    background-color:white;
+    border:1px solid #bbb;
+    border-radius:8px;
+    padding:15px;
+    text-align:center;
+    position:relative;
+    box-sizing:border-box;
+}
+
+
+/* IMAGE */
+
+.artwork img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+
+/* HEART */
+
+.heart-button{
+    position:absolute;
+    top:20px;
+    right:20px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+    border-radius:50%;
+
+    background-color:white;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    box-shadow:0 2px 6px rgba(0,0,0,0.25);
+}
+
+.heart-button:hover{
+    background-color:#ffe5e5;
+}
+
+
+/* ARTWORK NAME */
+
+.artwork h3{
+    margin:12px 0 8px 0;
+}
+
+
+/* DETAILS */
+
+.artwork p{
+    margin:7px 0;
+}
+
+
+/* RATING */
+
+.rating{
+    color:#f5b301;
+    font-size:20px;
+    margin:8px 0;
+}
+
+.rating-number{
+    color:#555;
+    font-size:14px;
+}
+
+
+/* PURCHASE COUNT */
+
+.purchase-count{
+    color:#555;
+    font-size:14px;
+}
+
+
+/* OFFER */
+
+.offer{
+    color:red;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+
+/* BUY NOW */
+
+.buy-button{
+    background-color:lightgreen;
+    border:none;
+    padding:11px 25px;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.buy-button:hover{
+    background-color:#90ee90;
+}
+
+
+/* EMPTY WISHLIST */
+
+.empty{
+    background-color:white;
+    border:1px solid #bbb;
+    border-radius:8px;
+    padding:40px;
+    text-align:center;
+}
+
+.empty h2{
+    margin-top:0;
+}
+
+.empty a{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background-color:lightblue;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.empty a:hover{
+    background-color:#87ceeb;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+    .header{
+        height:160px;
+    }
+
+    .top-links{
+        right:50%;
+        top:auto;
+        bottom:18px;
+        transform:translateX(50%);
+    }
+
+    .artworks{
+        grid-template-columns:1fr;
+    }
+
+}

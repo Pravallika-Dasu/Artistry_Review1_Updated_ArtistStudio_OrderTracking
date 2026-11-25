@@ -1,0 +1,3 @@
+@import './Login.css';
+.auth-signup-page .auth-visual{background-image:linear-gradient(90deg,rgba(24,23,20,.7),rgba(24,23,20,.16)),url('/images/art-banner-1.jpg')}
+.auth-success{color:#477b58}
